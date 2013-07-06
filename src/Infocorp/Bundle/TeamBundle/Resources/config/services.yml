@@ -1,7 +1,9 @@
-parameters:
-#    infocorp_team.example.class: Infocorp\Bundle\TeamBundle\Example
-
 services:
-#    infocorp_team.example:
-#        class: %infocorp_team.example.class%
-#        arguments: [@service_id, "plain_value", %parameter%]
+    sonata.admin.team:
+        class: Infocorp\Bundle\TeamBundle\Admin\TeamAdmin
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: Times, label: "Times"}
+        arguments:
+            - ~
+            - Infocorp\Bundle\TeamBundle\Entity\Team 
+            - 'SonataAdminBundle:CRUD'

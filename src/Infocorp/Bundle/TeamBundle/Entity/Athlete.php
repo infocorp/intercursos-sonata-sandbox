@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Athlete
  *
- * @ORM\Table()
+ * @ORM\Table(name="athlete")
  * @ORM\Entity(repositoryClass="Infocorp\Bundle\TeamBundle\Entity\AthleteRepository")
  */
 class Athlete
@@ -34,6 +34,14 @@ class Athlete
      * @ORM\Column(name="rga", type="string", length=12)
      */
     private $rga;
+
+    /**
+     * @var int
+     * 
+     * @ORM\ManyToOne(targetEntity="Team")
+     * @ORM\JoinColumn(name="athele_team", referencedColumnName="id")
+     */
+    private $team;
 
 
     /**

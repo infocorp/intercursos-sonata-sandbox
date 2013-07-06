@@ -1,0 +1,2 @@
+imports:
+    - { resource: @InfocorpTeamBundle/Resources/config/services.yml }
