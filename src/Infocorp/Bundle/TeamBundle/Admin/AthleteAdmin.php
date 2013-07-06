@@ -22,7 +22,11 @@ class AthleteAdmin extends Admin
 
     protected function configureDatagridFilters(DatagridMapper $datagridMapper)
     {
-        
+        $datagridMapper
+            ->add('name')
+            ->add('rga')
+            ->add('team')
+        ;
     }
 
     protected function configureListFields(ListMapper $listMapper)
