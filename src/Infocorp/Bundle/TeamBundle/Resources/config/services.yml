@@ -2,8 +2,17 @@ services:
     sonata.admin.team:
         class: Infocorp\Bundle\TeamBundle\Admin\TeamAdmin
         tags:
-            - {name: sonata.admin, manager_type: orm, group: Times, label: "Times"}
+            - {name: sonata.admin, manager_type: orm, group: Times, label: "Equipes"}
         arguments:
             - ~
             - Infocorp\Bundle\TeamBundle\Entity\Team 
+            - 'SonataAdminBundle:CRUD'
+
+    sonata.admin.athlete:
+        class: Infocorp\Bundle\TeamBundle\Admin\AthleteAdmin
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: Times, label: "Atletas"}
+        arguments:
+            - ~
+            - Infocorp\Bundle\TeamBundle\Entity\Athlete
             - 'SonataAdminBundle:CRUD'

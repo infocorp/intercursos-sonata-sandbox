@@ -36,7 +36,7 @@ class Athlete
     private $rga;
 
     /**
-     * @var int
+     * @var integer
      * 
      * @ORM\ManyToOne(targetEntity="Team")
      * @ORM\JoinColumn(name="athele_team", referencedColumnName="id")
@@ -98,5 +98,38 @@ class Athlete
     public function getRga()
     {
         return $this->rga;
+    }
+
+    /**
+     * Get team
+     *
+     * @return integer 
+     */
+    public function getTeam()
+    {
+        return $this->team;
+    }
+
+    /**
+     * Set team
+     *
+     * @param string $team
+     * @return Athlete
+     */
+    public function setTeam($team)
+    {
+        $this->team = $team;
+    
+        return $this;
+    }
+
+    /**
+     * Returns a string representation
+     *
+     * @return string
+     */
+    public function __toString()
+    {
+        return $this->getName() ?: '-';
     }
 }

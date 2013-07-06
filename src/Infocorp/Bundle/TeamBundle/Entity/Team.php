@@ -121,4 +121,14 @@ class Team
     {
         return $this->sport;
     }
+
+    /**
+     * Returns a string representation
+     *
+     * @return string
+     */
+    public function __toString()
+    {
+        return $this->getName() ?: '-';
+    }
 }
