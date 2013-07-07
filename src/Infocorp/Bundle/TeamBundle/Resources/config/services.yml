@@ -16,3 +16,12 @@ services:
             - ~
             - Infocorp\Bundle\TeamBundle\Entity\Athlete
             - 'SonataAdminBundle:CRUD'
+
+    sonata.admin.sport:
+        class: Infocorp\Bundle\TeamBundle\Admin\SportAdmin
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: Times, label: "Esportes"}
+        arguments:
+            - ~
+            - Infocorp\Bundle\TeamBundle\Entity\Sport
+            - 'SonataAdminBundle:CRUD'

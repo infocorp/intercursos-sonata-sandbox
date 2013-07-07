@@ -38,7 +38,8 @@ class Team
     /**
      * @var string
      *
-     * @ORM\Column(name="sport", type="string", length=50)
+     * @ORM\ManyToOne(targetEntity="Sport")
+     * @ORM\JoinColumn(name="team_sport", referencedColumnName="id")
      */
     private $sport;
 

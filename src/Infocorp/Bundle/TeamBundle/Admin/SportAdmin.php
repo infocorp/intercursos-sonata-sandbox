@@ -1,4 +1,5 @@
 <?php
+
 namespace Infocorp\Bundle\TeamBundle\Admin;
 
 use Sonata\AdminBundle\Admin\Admin;
@@ -6,14 +7,12 @@ use Sonata\AdminBundle\DataGrid\ListMapper;
 use Sonata\AdminBundle\DataGrid\DatagridMapper;
 use Sonata\AdminBundle\Form\FormMapper;
 
-class TeamAdmin extends Admin
+class SportAdmin extends Admin
 {
     protected function configureFormFields(FormMapper $formMapper)
     {
         $formMapper
             ->add('name', null, array('label' => 'Nome'))
-            ->add('course', null, array('label' => 'Curso'))
-            ->add('sport', 'sonata_type_model_list', array('label' => 'Modalidade'))
         ;
     }
 
@@ -21,8 +20,6 @@ class TeamAdmin extends Admin
     {
         $datagridMapper
             ->add('name')
-            ->add('course')
-            ->add('sport')
         ;
     }
 
@@ -30,8 +27,6 @@ class TeamAdmin extends Admin
     {
         $listMapper
             ->addIdentifier('name')
-            ->add('course')
-            ->add('sport')
         ;
     }
 }
