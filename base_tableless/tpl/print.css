@@ -1,0 +1,5 @@
+#header .menu, #footer .menu{display:none;}
+#conteudo .print{display:none;}
+#header .info_print{display:block; text-align:center; margin:5px 0;}
+#conteudo .titulo{margin-bottom:5px; padding-bottom:5px; border-bottom:5px solid #999;}
+#footer{margin-top:5px; padding-top:5px; border-top:5px solid #999;}
