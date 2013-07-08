@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <title>{% block title %}Intercursos UFMT 2013{% endblock %}</title>
+  {% block stylesheets %}
+    {% stylesheets
+      'bundles/infocorpintercursos/css/style.css'
+      filter='?cssmin'
+      output='css/generated/layout.css'
+      %}
+      <link rel="stylesheet" href="{{ asset_url }}" />
+    {% endstylesheets %}
+  {% endblock %}
+</head>
+<body>
+  {% block header %}
+  <div id="header">
+    <div class="barra_azul"></div>
+    <div class="logo">
+      <a href="{{ path('homepage') }}" title="Intercursos UFMT 2013 | Home">
+        <img src="{{ asset('bundles/infocorpintercursos/images/logo.png') }}" 
+        border="0" alt="Logo" title="Intercursos UFMT 2013" width="300" height="136" />
+      </a>
+    </div><!--/logo-->
+    <div class="panoramica">
+      <h1 class="descricao">Uma descrição do torneio aqui.</h1>
+    </div>
+
+    <ul class="menu_um">
+      <li><a href="#">Item 1</a></li>
+      <li><a href="#">Item 2</a>
+        <ul class="sub_um">
+         <li><a href="#">sub 1</a></li>
+         <li><a href="#">sub 2</a>
+          <ul class="sub_sub_um">
+            <li><a href="#">sub sub 1</a></li>
+            <li><a href="#">sub sub 2</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#">Item 3</a></li>
+  </ul>
+</div>
+{% endblock %}
+{% block content %}{% endblock %}
+{% block footer %}
+<div id="footer">
+  <div class="footer_content">
+
+    <ul class="footer_elementos">
+      <li>
+        <img src="" border="0" alt="Logo" title="Infocorp - Empresa Júnior do IC"/>
+      </li>
+      <li>
+        <div class="tel">Ligue:</div><!--/tel-->
+        <p>(99) 9999-9999</p>
+        <p>(99) 9999-9999</p>
+      </li>
+      <li class="right">
+        <div class="mail">Escreva:</div>
+        <p class="min">contato@contato.com.br</p>
+        <p class="min">falecom@contato.com.br</p>
+      </li>
+    </ul>
+
+  </div><!--/content-->
+</div><!--/footer-->
+{% endblock %}
+
+{% block javascripts %}{% endblock %}
+</body>
+</html>

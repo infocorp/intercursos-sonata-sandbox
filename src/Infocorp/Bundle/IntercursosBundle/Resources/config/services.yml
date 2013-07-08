@@ -1,0 +1,7 @@
+parameters:
+#    infocorp_intercursos.example.class: Infocorp\Bundle\IntercursosBundle\Example
+
+services:
+#    infocorp_intercursos.example:
+#        class: %infocorp_intercursos.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
