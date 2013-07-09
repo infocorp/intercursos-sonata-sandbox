@@ -1,183 +1,62 @@
-/*
-Site: Intercursos UFMT 2013
-Versão: 1.0
-Autor: Marcelon Bruno Hack
-Site: www.infocorpconsultoria.com.br
-*/
+/****************************** TOPO **********************************/
+.top {
+	width: 100%;
+	overflow: hidden;
+}
 
-/*RESET*/
-*{margin:0; padding:0;}
-body{background: #F2F2F2;}
-#site{width:100%; margin:-30px auto;}
-.spacer{width:900px; height:15px; background:url(images/spacer_bg.png) no-repeat center;}
-#footer_spacer{width:900px; height:15px; background:url(images/footer_spacer_bg.png) no-repeat center;}
-#content{margin:160px auto; width:1000px;}
-#clear{clear:both;}
+.top-bar {
+	width: 100%;
+	height: 30px;
+	background: #00667f;
+}
 
+.logo {
+	float: left;
+}
 
-/*BARRA AZUL*/
+.menu {
+	float: left;
+	margin: 70px 60px 0 0;
+}
 
+.menu ul {
+	list-style-type: none;
+}
 
-/*TOPO*/
-#header{width:100%; height:135px;}
-#header .barra_azul{margin:30px auto;width: 100%; height: 30px; background: #00667F;}
-#header .logo{width:300px; height:136px; margin:-30px 120px; display:block;}
+.border-blue {
+	border-bottom-color: #00aad4 !important;
+}
 
-#header .panoramica{margin: 30px auto; width:100%; height:110px; background: rgba(0,0,0,0.5) url(images/img_topo.jpg) no-repeat;}
-#header .panoramica h1{font: 40px Tahoma, Geneva, sans-serif; color:#FFF;margin: 0px 180px;padding-top: 60px;text-shadow: 5px 1px 4px #000;}
-#header .line{width:900px; height:2px; background:url(images/header_line_bg.png) repeat-x;}
-#header .menu{float:left; list-style:none; display:inline; width:785px; padding:3px 12px; margin:-235px 0px 0px 400px;}
-#header .menu li{float:left; margin:10px;border-bottom: 5px solid #666;padding-bottom: 2px;}
-#header .menu li a{font:bold 14px Tahoma, Geneva, sans-serif; color:#00667F; text-transform:uppercase; text-decoration:none; float:left;}
-#header .menu li a:hover{text-decoration:underline;}
-#header .menu .modalidade{border-color: #00AAD4;}
-#header .menu .competicoes{border-color: #FF0000;}
-#header .menu .selecao{border-color: #5AA02C;}
-#header .menu .imprensa{border-color: #FFCC00;}
-#header .menu .torcida{border-color: #000000;}
-#header .info_print{display:none;}
+.border-red {
+	border-bottom-color: #f00 !important;
+}
 
-/*
- MENU DO TOPO E RODAPE COM AS MES
-  
- #header .panoramica{width:100%; height:110px; background: url(images/img_topo.jpg) no-repeat;}
-#header .line, #footer .line{width:900px; height:2px; background:url(images/header_line_bg.png) repeat-x;}
-#header .menu, #footer .menu{float:left; list-style:none; display:inline; width:750px; padding:3px 12px; margin:-235px 0px 0px 400px;}
-#header .menu li, #footer .menu li{float:left; margin:10px;}
-#header .menu li a, #footer .menu li a{font:bold 14px Arial, Helvetica, sans-serif ; color:#FFF; text-transform:uppercase; text-decoration:none; float:left;}
-#header .menu li a:hover, #footer .menu li a:hover{text-decoration:underline;}
-#header .info_print{display:none;}*/
+.border-green {
+	border-bottom-color: #5aa02c !important;
+}
 
-/*HOME SLIDE*/
-#next2 {font:bold 14px Arial, Helvetica, sans-serif ; color:#FFF;margin: 85px 0px 0px -45px;z-index: 1000;position: relative;float: left;}
-#prev2 {font:bold 14px Arial, Helvetica, sans-serif ; color:#FFF;margin: 85px 0px 0px -635px;z-index: 1000;position: relative;float: left;}
-#home_slide{height:230px; background:#1A8740;box-shadow: #333 0 2px 3px;-webkit-box-shadow: #333 0 2px 3px;-moz-box-shadow: #333 0 2px 3px;}
-#home_slide .bloco_um{float:left; width:630px; height:210px; margin:5px; position:relative;box-shadow: #333 0 2px 3px;-webkit-box-shadow: #333 0 2px 3px;-moz-box-shadow: #333 0 2px 3px;}
-#home_slide .bloco_um ul{float:left; list-style:none; width:990px; height:220px; overflow:hidden;}
-#home_slide .bloco_um ul li .slide_info{padding:10px; background:rgba(0,0,0,0.5); position:absolute; z-index:100; bottom:0px; left:0px; margin-bottom:-65px;
-										margin-left:0px; width:610px;}
-#home_slide .bloco_um ul li .slide_info .site{font:bold 14px Arial, Helvetica, sans-serif; color:#FFF; margin-bottom:5px;
-											float:left; width:380px;}
-#home_slide .bloco_um ul li .slide_info .date{font:bold 14px Arial, Helvetica, sans-serif; color:#007FBD; text-transform:uppercase;
-											float:left; width:380px;}
-#home_slide .bloco_um ul li .slide_info a{position: absolute; right:0px; bottom:0px; background:url(images/slide_btn.png) no-repeat top;
-										font:bold 14px Arial, Helvetica, sans-serif; color:#FFF; text-decoration:none;
-										text-transform:uppercase; padding:4px 6px 5px 6px; margin-right:20px; margin-bottom:17px;}
-#home_slide .bloco_um ul li .slide_info a:hover{background:url(images/slide_btn.png) no-repeat bottom;}
+.menu-separator {
+	border-bottom: 3px solid;
+	display: block;
+	width: 95px;
+	margin: 0 auto;
+}
 
-#home_slide .bloco_um .descricao {width: 325px;height: 270px;margin: -215px 0px 0px 650px;}
-#home_slide .bloco_um .descricao h1{font:30px Tahoma, Geneva, sans-serif; color:#FFF;}
-#home_slide .bloco_um .descricao p{font:12px Tahoma, Geneva, sans-serif; color:#FFF; margin: 2px -12px;text-align: justify;}
+.menu ul li {
+	text-decoration: none;
+	display: inline-block;
+}
 
-#home_slide .bloco_dois{float:right; margin:5px; width:340px;}
-#home_slide .bloco_dois ul{list-style:none; float:right; margin-top:1px;}
-#home_slide .bloco_dois ul li{padding:3px; background:#172C3D; margin-bottom:3px; float:left; height:62px; border:1px solid #2F4251;}
+.menu ul li a {
+	padding: 50px;
+	font: 18px Tahoma, sans-serif;
+	color: #000;
+}
 
-/*HOME*/
-#conteudo .fone{width:880px; padding:5px 5px; font:bold 16px Tahoma, Geneva, sans-serif; color:#172C3D; float:left;}
-#conteudo .fone p{float:left; padding:5px 0;}
-#conteudo .fone .bloco_fone{float:right; font:14px Tahoma, Geneva, sans-serif; color:#FFF; background:url(images/bloco_fone_bg.png) no-repeat;
-							padding:8px 40px 8px 40px;}
-#conteudo .fone .bloco_fone strong{margin-right:15px; float:left;}
+.menu ul li a:hover {
+	text-decoration: none;
+}
 
-#conteudo .lista_home{list-style:none; float:left; display:inline;}
-#conteudo .lista_home li{padding:5px; background:#007C9B; border:1px solid #007C9B; width:228px; height:120px;float:left; margin:5px;box-shadow: #333 0 2px 3px;
--webkit-box-shadow: #333 0 2px 3px;
--moz-box-shadow: #333 0 2px 3px;}
-#conteudo .lista_home li img{float:left; margin:0px 0px 0px 0px;}
-#conteudo .lista_home li h3{font:bold 15px Tahoma, Geneva, sans-serif; color:#FFF; padding:4px 0px;
-							float:left; width:260px; margin-left:95px;}
-#conteudo .lista_home li p{font:bold 12px Tahoma, Geneva, sans-serif; color:#FFF; margin-top:5px; float:left; width:260px;margin-left:27px;}
-
-/*ULTIMAS NOTICIAS*/
-#conteudo .ultimas_not{list-style:none; float:left; display:inline;}
-#conteudo .ultimas_not .not_desq{border:1px solid #007C9B; width:228px; height:120px;
-						float:left; margin:5px;}
-#conteudo .ultimas_not .not_desq img{float:left; margin-left: -5px;margin-top: -5px;}
-#conteudo .ultimas_not .not_desq h3{font: 25px Tahoma, Geneva, sans-serif;color: #666;padding: 4px 0px;float: left;width: 542px;}
-
-
-
-#conteudo .ultimas_not .not_list{padding:5px; width:413px; height:215px;
-						float:left; margin-left:320px;}
-#conteudo .ultimas_not .not_list ul{list-style: square;margin: -15px 26px;color: #666;}
-#conteudo .ultimas_not .not_list li{margin: 10px 0;font: bold 12px Tahoma, Geneva, sans-serif;color: #666;}
-#conteudo .ultimas_not .not_list h3{font: 15px Verdana, Geneva, sans-serif; color:#FFF; padding:4px 0px;
-							float:left; width:260px; margin-left:95px;}
-
-/*CONTEUDO*/
-#conteudo{margin:0px 0px 0px 0px; float:left; width:1000px; min-height:560px;}
-#conteudo .titulo{padding:6px; background:#333; font:20px "Trebuchet MS", Arial, Helvetica, sans-serif; color:#FFF; margin-bottom:10px;}
-#conteudo .item_left{width:430px; float:left;}
-
-#conteudo .item_left .ref{padding:5px; background:#FFF; margin-bottom:10px; float:left;}
-#conteudo .item_left .ref h2{font:18px Arial, Helvetica, sans-serif; color:#333;}
-#conteudo .item_left .ref p{font:12px Arial, Helvetica, sans-serif; color:#333; margin:10px 0;}
-#conteudo .item_left .ref ul{list-style:square; margin:0 25px; color:#666;}
-#conteudo .item_left .ref li{margin:3px 0; font:bold 12px Arial, Helvetica, sans-serif; color:#666;}
-#conteudo .item_left .ref span{font:27px Arial, Helvetica, sans-serif; color:#069;}
-#conteudo .item_left .ref .contato{margin:10px 0;}
-#conteudo .item_left .ref .contato span{color:#FFF; padding:6px; background:#069; font-size:20px; margin-bottom:10px; display:block; float:left;}
-#conteudo .item_left .ref .contato p{margin:3px 0; float:left; display:block; font-size:18px}
-
-#conteudo .item_left .images{float:left; list-style:none;}
-#conteudo .item_left .images li{margin-bottom:10px;}
-
-#conteudo .item_right{width:430px; float:right;}
-
-#conteudo .item_right .thumb{float:right;}
-#conteudo .item_right .gallery{padding:5px; background:#FFF; float:right; margin:10px 0; width:420px; list-style:none; display:inline;}
-#conteudo .item_right .gallery li{float:left; margin:3px 2px; font:bold 14px Arial, Helvetica, sans-serif; color:#FFF;
-									background:url(images/bg_servicos.png) no-repeat; width:396px; padding:9px 0 9px 35px;}
-
-#conteudo .item_right .print{padding:6px; background:#333; text-align:center; float:right; width:418px;}
-#conteudo .item_right .print a{background:none; border:0; font:bold 18px Arial, Helvetica, sans-serif; color:#FFF; cursor:pointer; text-decoration:none;}
-
-/*FOOTER*/
-#footer{height:185px; background:#1A8740;}
-#footer .footer_content{width:900px; margin:0 auto; height:185px;}
-#footer .footer_elementos{float:left; width:900px; list-style:none; display:inline;}
-#footer .footer_elementos li{float:left; margin:20px 130px 0 10px;}
-#footer .footer_elementos .right{float:right; margin:20px 10px 0 0;}
-#footer .footer_elementos li .tel{font:bold italic 20px Arial, Helvetica, sans-serif; color:#FFF; padding-left:38px; background:url(images/footer_tel.png) no-repeat left;}
-#footer .footer_elementos li .mail{font:bold italic 20px Arial, Helvetica, sans-serif; color:#FFF; padding-left:38px; background:url(images/footer_mail.png) no-repeat left;}
-#footer .footer_elementos li p{font:bold 16px Arial, Helvetica, sans-serif; color:#fff; text-transform:uppercase; margin:5px 10px;}
-#footer .footer_elementos li .min{font:bold 14px Arial, Helvetica, sans-serif; color:#fff; text-transform:lowercase; margin:8px 10px;}
-
-/*PÁGINAS*/
-#pagina{width:880px;}
-
-/*404*/
-.erro{padding:5px; background:#FFF; text-align:center;}
-.erro p{font:bold 12px Arial, Helvetica, sans-serif; color:#069; margin-bottom:10px;}
-
-/*QUEM SOMOS*/
-#pagina ul{list-style:none;}
-#pagina .left{width:580px; margin-right:20px; float:left;}
-#pagina .left li{padding:5px; background:#FFF; border:1px solid #CCC; margin-bottom:10px;}
-#pagina .left li h2{font:bold 14px Verdana, Geneva, sans-serif; text-transform:uppercase; color:#069;}
-#pagina .left li p{margin:10px 0; font:13px Verdana, Geneva, sans-serif; color:#666;}
-#pagina .right{float:right; width:280px;}
-#pagina .right li{margin-bottom:10px;}
-
-/*TABALHOS*/
-#pagina .trabalhos{list-style:none; width:880px; float:left; display:inline;}
-#pagina .trabalhos li{float:left; font:bold 11px Arial, Helvetica, sans-serif; text-align:center; width:260px; margin:5px; padding:10px;
-						background:#FFF; border:1px solid #CCC; min-height:220px;}
-#pagina .trabalhos li .link{color:#069; margin:5px 0;}
-#pagina .trabalhos li a{color:#069; text-decoration:none; font-size:13px;}
-#pagina .trabalhos li a:hover{text-decoration:underline;}
-#pagina .trabalhos li img{padding:2px; border:1px dotted #CCC;}
-
-/*CONTATO*/
-#pagina .contato{float:left; width:250px; padding:5px; background:#FFF; border:1px solid #CCC;}
-#pagina .contato h3{font:bold italic 18px Arial, Helvetica, sans-serif; color:#09F; margin-bottom:10px;}
-#pagina .contato p{font:12px Verdana, Geneva, sans-serif; color:#666; margin:0 10px 10px 10px;}
-#pagina .fale{padding:10px; background:#FFF; margin:0 10px; float:right; width:570px; margin-left:10px; border:1px solid #ccc;}
-#pagina .fale label{display:block; margin-bottom:10px; background:#f5f5f5; padding:5px;}
-#pagina .fale span{display:block; margin-bottom:5px; font:bold 12px Tahoma, Geneva, sans-serif; color:#666;}
-#pagina .fale input, #pagina .fale textarea{background:#FFF; border:1px solid #999; padding:10px; font:14px Arial,
-											 Helvetica, sans-serif; color:#333; width:535px;}
-#pagina .fale .btn{width:160px; background:#666; color:#FFF; font:bold 14px Verdana, Geneva, sans-serif; color:#FFF;
-					display:block; margin:5px auto; cursor:pointer;}
-#pagina .fale .btn:hover{background:#333;}
+.menu ul li a:hover .menu-separator {
+	border-bottom-color: #666 !important;
+}
