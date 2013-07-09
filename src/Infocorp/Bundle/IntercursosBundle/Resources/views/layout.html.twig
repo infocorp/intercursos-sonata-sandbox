@@ -8,6 +8,7 @@
       'bundles/infocorpintercursos/css/style.css'
       'bundles/infocorpintercursos/css/normalize.css'
       'bundles/infocorpintercursos/css/bootstrap.min.css'
+      'bundles/infocorpintercursos/css/bootstrap-responsive.min.css'
       filter='?cssmin'
       output='css/generated/layout.css'
       %}
@@ -18,68 +19,36 @@
 <body>
   {% block header %}
     <header class="top">
-      <div class="top-bar"></div>
-      <div class="logo">
-        <a href="{{ path('homepage') }}" title="Intercursos UFMT 2013 | Home">
-          <img src="{{ asset('bundles/infocorpintercursos/images/logo.png') }}" title="Logo" />
-        </a>
+      <div class="top-bar">
+        <div class="top-bar-inner"></div>
       </div>
-      <nav class="menu">
-        <ul class="navigation">
-          <li class="nav-item"><a href="#">Modalidades</a><span class="menu-separator border-blue"></span></li>
-          <li class="nav-item"><a href="#">Notícias</a><span class="menu-separator border-red"></span></li>
-          <li class="nav-item"><a href="#">Contato</a><span class="menu-separator border-green"></span></li>
-        </ul>
-      </nav>
-    </header>
-
-    <div id="header">
-        <ul class="menu_um">
-          <li><a href="#">Item 1</a></li>
-          <li><a href="#">Item 2</a>
-            <ul class="sub_um">
-             <li><a href="#">sub 1</a></li>
-             <li><a href="#">sub 2</a>
-                <ul class="sub_sub_um">
-                  <li><a href="#">sub sub 1</a></li>
-                  <li><a href="#">sub sub 2</a></li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-          <li><a href="#">Item 3</a></li>
-        </ul>
-
-        <div class="panoramica">
-          <h1 class="descricao">Uma descrição do torneio aqui.</h1>
+      <div class="inner-top">
+        <div class="logo">
+          <a href="{{ path('homepage') }}" title="Intercursos UFMT 2013 | Home">
+            <img src="{{ asset('bundles/infocorpintercursos/images/logo.png') }}" title="Logo" />
+          </a>
         </div>
-    </div>
-    {% endblock %}
-    <div class="container">
+        <nav class="menu">
+          <ul class="navigation">
+            <li class="nav-item"><a href="#">Modalidades</a><span class="menu-separator border-blue"></span></li>
+            <li class="nav-item"><a href="#">Notícias</a><span class="menu-separator border-red"></span></li>
+            <li class="nav-item"><a href="#">Contato</a><span class="menu-separator border-green"></span></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+  {% endblock %}
+    <div class="container main-content">
       {% block content %}{% endblock %}
     </div>
     {% block footer %}
-    <div id="footer">
-      <div class="footer_content">
-
-        <ul class="footer_elementos">
-          <li>
-            <img src="{{ asset('bundles/infocorpintercursos/images/infocorp_logo.png') }}" alt="Logo" title="Infocorp - Empresa Júnior do IC"/>
-          </li>
-          <li>
-            <div class="tel">Ligue:</div><!--/tel-->
-            <p>(99) 9999-9999</p>
-            <p>(99) 9999-9999</p>
-          </li>
-          <li class="right">
-            <div class="mail">Escreva:</div>
-            <p class="min">contato@contato.com.br</p>
-            <p class="min">falecom@contato.com.br</p>
-          </li>
-        </ul>
-
-      </div><!--/content-->
-    </div><!--/footer-->
+      <footer class="footer">
+        <section class="footer-column"></section>
+        <section class="footer-column"></section>
+        <section class="footer-column">
+          <img id="logo-infocorp" src="{{ asset('bundles/infocorpintercursos/images/infocorp_logo.png') }}" alt="Logo" title="Infocorp - Empresa Júnior do IC"/>
+        </section>
+      </footer>
     {% endblock %}
 
     {% block javascripts %}

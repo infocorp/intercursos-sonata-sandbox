@@ -1,7 +1,11 @@
-/****************************** TOPO **********************************/
+body {
+	background: #f2f2f2 !important;
+}
+/*  ###################### TOPO ###################### */
 .top {
 	width: 100%;
 	overflow: hidden;
+	background: #f2f2f2;
 }
 
 .top-bar {
@@ -10,10 +14,24 @@
 	background: #00667f;
 }
 
+.top-bar-inner {
+	width: 980px;
+	margin: 0 auto;
+	height: 100%;
+}
+
+.inner-top {
+	width: 980px;
+	margin: 0 auto;
+}
+
 .logo {
 	float: left;
 }
 
+/* ######################### END TOPO ############################## */
+
+/* ########################## MENU #################################### */
 .menu {
 	float: left;
 	margin: 70px 60px 0 0;
@@ -50,13 +68,43 @@
 .menu ul li a {
 	padding: 50px;
 	font: 18px Tahoma, sans-serif;
-	color: #000;
+	color: #0b4c5c;
 }
 
 .menu ul li a:hover {
 	text-decoration: none;
 }
 
-.menu ul li a:hover .menu-separator {
+.menu ul li:hover span {
 	border-bottom-color: #666 !important;
 }
+/* ########################## END MENU #################################### */
+
+/* ########################## CONTENT ####################################3*/
+.main-content {
+	background: #f2f2f2;
+}
+/* ########################## END CONTENT ####################################3*/
+
+
+/* ############################ FOOTER ####################################*/
+.footer {
+	width: 100%;
+	overflow: hidden;
+	background: #1a8740;
+	margin-top: 70px;
+}
+
+.footer-column {
+	float: left;
+	width: 32%;
+	margin: 0 10px;
+	min-height: 300px;
+}
+
+#logo-infocorp {
+	position: relative;
+	bottom: 0;
+	right: 0;
+}
+/* ###########################3 END FOOTER ####################################*/
