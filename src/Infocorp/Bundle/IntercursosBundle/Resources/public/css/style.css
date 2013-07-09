@@ -29,6 +29,35 @@ body {
 	float: left;
 }
 
+.image-concept {
+	width: 100%;
+	overflow: hidden;
+}
+
+.image-concept img {
+	width: 100%;
+}
+
+.image-concept h1 {
+	text-align: right;
+	width: 50%;
+	margin: 0;
+	float: left;
+}
+
+.image-concept p {
+	width: 48%;
+	float: left;
+	padding: 15px;
+}
+
+.concept-description {
+	overflow: hidden;
+	position: relative;
+	bottom: 60px;
+	color: #fff;
+}
+
 /* ######################### END TOPO ############################## */
 
 /* ########################## MENU #################################### */
