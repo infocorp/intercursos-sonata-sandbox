@@ -56,8 +56,8 @@ body {
 .concept-description p {
 	width: 48%;
 	float: left;
-	padding: 15px;
 	font-family: "Aleo";
+	margin: 14px 0 0 15px;
 }
 
 .concept-description {
