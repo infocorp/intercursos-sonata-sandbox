@@ -30,7 +30,7 @@
         </div>
         <nav class="menu">
           <ul class="navigation">
-            <li class="nav-item"><a href="#">Modalidades</a><span class="menu-separator border-blue"></span></li>
+            <li class="nav-item"><a class="modalidades" href="#">Modalidades</a><span class="menu-separator border-blue"></span></li>
             <li class="nav-item"><a href="#">Notícias</a><span class="menu-separator border-red"></span></li>
             <li class="nav-item"><a href="#">Contato</a><span class="menu-separator border-green"></span></li>
           </ul>
@@ -46,7 +46,67 @@
     </header>
   {% endblock %}
     <div class="container main-content">
-      {% block content %}{% endblock %}
+      {% block content %}
+
+<div id="home_slide">
+  
+  <div class="bloco_um">
+      <ul>
+          <li>
+                <img src="<?php setHome();?>/js/timthumb.php?src=<?php setHome();?>/tpl/midias/futsal.jpg&h=220&w=630&zc=1&q=100"
+                             alt="Trabalho Facebook" title="Portfólio -Facebook" width="630" height="220">
+                             
+                <div class="slide_info">
+                  <div class="site">FACEBOOK</div>
+                  
+                    <div class="date">Lançamento: 05/09/2011</div>
+                    <a href="http://facebook.com" title="Facebook" target="_blank">Ver Site</a>
+                </div><!--/slide_info-->
+                <div class="descricao">
+                  <h1>Um fato conhecido</h1>
+                  <p>É um fato conhecido de todos que um leitor se distrairá com o conteúdo de texto legível de uma página quando estiver examinando sua diagramação. A vantagem de usar Lorem Ipsum é que ele tem uma distribuição normal de letras, ao contrário de "Conteúdo aqui, conteúdo aqui", fazendo com que ele tenha uma aparência similar a de um texto legível. Muitos softwares de publicação e editores de páginas na internet agora usam Lorem Ipsum como texto-modelo padrão, e uma rápida busca por 'lorem ipsum' mostra vários websites ainda em sua fase de construção.</p>
+                </div>
+            </li>
+            <li>
+                <img src="<?php setHome();?>/js/timthumb.php?src=<?php setHome();?>/tpl/midias/xadrez.jpg&h=220&w=630&zc=1&q=100"
+                             alt="Trabalho Twitter" title="Portfólio - Twitter" width="630" height="220">
+                <div class="slide_info">
+                  <div class="site">TWITTER</div>
+                    <div class="date">Lançamento: 05/09/2011</div>
+                    <a href="http://twitter.com" title="Twitter" target="_blank">Ver Site</a>
+                </div><!--/slide_info-->
+                <div class="descricao">
+                  <h1>Leitor se distrairá</h1>
+                  <p>É um fato conhecido de todos que um leitor se distrairá com o conteúdo de texto legível de uma página quando estiver examinando sua diagramação.</p>
+                </div>
+            </li>
+            <li>
+                <img src="<?php setHome();?>/js/timthumb.php?src=<?php setHome();?>/tpl/midias/voleibol.jpg&h=220&w=630&zc=1&q=100"
+                             alt="Trabalho UpInside" title="Portfólio - UpInside" width="630" height="220">
+                <div class="slide_info">
+                  <div class="site">UPINSIDE</div>
+                    <div class="date">Lançamento: 05/09/2011</div>
+                    <a href="http://upinside.com.br" title="UpInside" target="_blank">Ver Site</a>
+                </div><!--/slide_info-->
+                <div class="descricao">
+                  <h1>Variações disponíveis</h1>
+                  <p>Existem muitas variações disponíveis de passagens de Lorem Ipsum, mas a maioria.</p>
+                </div>
+            </li>
+        </ul>
+    </div><!--/blodco_um-->
+    
+    <div class="nav">
+      <a id="prev2" href="#">
+      <img src="<?php setHome();?>/js/timthumb.php?src=<?php setHome();?>/tpl/images/btn_ant_esq.png&h=60&w=40&zc=1&q=100"
+        alt="Anterior" title="Anterior" width="40" height="60"></a> 
+        <a id="next2" href="#"><img src="<?php setHome();?>/js/timthumb.php?src=<?php setHome();?>/tpl/images/btn_ant_dir.png&h=60&w=40&zc=1&q=100"
+        alt="Anterior" title="Anterior" width="40" height="60"></a> </a></div>
+    
+</div><!--/home_slide-->
+
+
+      {% endblock %}
     </div>
     {% block footer %}
       <footer class="footer">
@@ -62,9 +122,32 @@
       <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
         {% javascripts
               'bundles/infocorpintercursos/js/bootstrap.min.js'
+              'bundles/infocorpintercursos/js/cycle.js'
+              'bundles/infocorpintercursos/js/mascara.js'
+              'bundles/infocorpintercursos/js/shadowbox/shadowbox.js'
               output='js/generated/main.js'
           %}
         <script type="text/javascript" src="{{ asset_url }}"></script>
+        <script type="text/javascript">
+          Shadowbox.init();
+
+          jQuery(function($){
+             $("#fone").mask("(99) 9999-9999");
+          });
+
+          $(function(){
+            $('.bloco_um > ul').cycle({
+              fx: 'fade',
+              speed: 1000,
+              timeout: 5000,
+                next:   '#next2', 
+                prev:   '#prev2',
+              pagerAnchorBuilder: function(idx, slide){
+                return '.bloco_dois li:eq('+ (idx) +') a';
+              }
+            });
+          });
+          </script>
       {% endjavascripts %}
     {% endblock %}
   </div>

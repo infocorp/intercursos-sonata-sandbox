@@ -109,6 +109,12 @@ body {
 	color: #0b4c5c;
 }
 
+.menu ul li .modalidades {
+	border-color: #00AAD4;
+	border-bottom: 5px solid #666;
+	padding-bottom: 2px;
+}
+
 .menu ul li a:hover {
 	text-decoration: none;
 }
@@ -118,11 +124,37 @@ body {
 }
 /* ########################## END MENU #################################### */
 
-/* ########################## CONTENT ####################################3*/
+/* ########################## CONTENT ####################################*/
 .main-content {
 	background: #f2f2f2;
+
+	/*HOME SLIDE*/
+#next2 {font:bold 14px Arial, Helvetica, sans-serif ; color:#FFF;margin: 85px 0px 0px -45px;z-index: 1000;position: relative;float: left;}
+#prev2 {font:bold 14px Arial, Helvetica, sans-serif ; color:#FFF;margin: 85px 0px 0px -635px;z-index: 1000;position: relative;float: left;}
+#home_slide{height:230px; background:#1A8740;box-shadow: #333 0 2px 3px;-webkit-box-shadow: #333 0 2px 3px;-moz-box-shadow: #333 0 2px 3px;}
+#home_slide .bloco_um{float:left; width:630px; height:210px; margin:5px; position:relative;box-shadow: #333 0 2px 3px;-webkit-box-shadow: #333 0 2px 3px;-moz-box-shadow: #333 0 2px 3px;}
+#home_slide .bloco_um ul{float:left; list-style:none; width:990px; height:220px; overflow:hidden;}
+#home_slide .bloco_um ul li .slide_info{padding:10px; background:rgba(0,0,0,0.5); position:absolute; z-index:100; bottom:0px; left:0px; margin-bottom:-65px;
+										margin-left:0px; width:610px;}
+#home_slide .bloco_um ul li .slide_info .site{font:bold 14px Arial, Helvetica, sans-serif; color:#FFF; margin-bottom:5px;
+											float:left; width:380px;}
+#home_slide .bloco_um ul li .slide_info .date{font:bold 14px Arial, Helvetica, sans-serif; color:#007FBD; text-transform:uppercase;
+											float:left; width:380px;}
+#home_slide .bloco_um ul li .slide_info a{position: absolute; right:0px; bottom:0px; background:url(images/slide_btn.png) no-repeat top;
+										font:bold 14px Arial, Helvetica, sans-serif; color:#FFF; text-decoration:none;
+										text-transform:uppercase; padding:4px 6px 5px 6px; margin-right:20px; margin-bottom:17px;}
+#home_slide .bloco_um ul li .slide_info a:hover{background:url(images/slide_btn.png) no-repeat bottom;}
+
+#home_slide .bloco_um .descricao {width: 325px;height: 270px;margin: -215px 0px 0px 650px;}
+#home_slide .bloco_um .descricao h1{font:30px Tahoma, Geneva, sans-serif; color:#FFF;}
+#home_slide .bloco_um .descricao p{font:12px Tahoma, Geneva, sans-serif; color:#FFF; margin: 2px -12px;text-align: justify;}
+
+#home_slide .bloco_dois{float:right; margin:5px; width:340px;}
+#home_slide .bloco_dois ul{list-style:none; float:right; margin-top:1px;}
+#home_slide .bloco_dois ul li{padding:3px; background:#172C3D; margin-bottom:3px; float:left; height:62px; border:1px solid #2F4251;}
+
 }
-/* ########################## END CONTENT ####################################3*/
+/* ########################## END CONTENT ####################################*/
 
 
 /* ############################ FOOTER ####################################*/
