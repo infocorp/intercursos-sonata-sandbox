@@ -1,2 +1,6 @@
 {% extends 'InfocorpIntercursosBundle::layout.html.twig' %}
-{% block content %}{% endblock %}
+{% block content %}
+  {% for new in news %}
+    {{ new.title }} <br>
+  {% endfor %}
+{% endblock %}
