@@ -8,6 +8,9 @@ class DefaultController extends Controller
 {
     public function indexAction()
     {
+        $newsRepo = $this->getDoctrine()
+            ->getRepository('SonataNewsBundle:Post')
+            ->findLastPostQueryBuilder()
         return $this->render('InfocorpIntercursosBundle:Default:index.html.twig', array());
     }
 }
