@@ -1,0 +1,10 @@
+Menu competições
+menu dropdown com 4 opções
+
+- Intercursos
+- Intercampis
+- JUMS
+- JUBS
+
+os releases estão no trello
+
