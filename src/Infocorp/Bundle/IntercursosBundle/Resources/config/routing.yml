@@ -7,5 +7,11 @@ news:
     defaults: { _controller: InfocorpIntercursosBundle:Default:news }
 
 show_news:
-    pattern: /noticias/{id}
+    pattern: /noticias/{slug}
     defaults: { _controller: InfocorpIntercursosBundle:Default:showNews }
+    requirements:
+        slug: "^[a-z0-9-]+$"
+
+show_category:
+    pattern: /noticias/categoria/{id}
+    defaults: { _controller: InfocorpIntercursosBundle:Default:showCategory }

@@ -1,8 +1,25 @@
 {% extends 'InfocorpIntercursosBundle::layout.html.twig' %}
 {% block content %}
-  <ul>
-    {% for item in news %}
-      <li><a href="{{ path('show_news', { 'id': item.id }) }}">{{ item.title }}</a></li>      
-    {% endfor %}
-  </ul>
+  <div class="row">
+    <div class="span3">
+      <section class="categories">
+        <ul class="nav nav-list">
+          <li class="nav-header">Categorias</li>
+          {% for category in categories %}
+            <li><a href="{{ path('show_category', { id: category.id }) }}">{{ category.name }}</a></li>
+          {% endfor %}
+        </ul>
+      </section>
+    </div>
+    <div class="span9">
+      <!-- LISTA DE NOTICIAS -->
+      <ul>
+        {% for item in news %}
+          <li><a href="{{ path('show_news', { 'slug': item.slug }) }}">{{ item.title }}</a></li>      
+        {% endfor %}
+      </ul>
+      <!-- LISTA DE NOTICIAS -->
+    
+    </div>
+  </div>
 {% endblock %}
