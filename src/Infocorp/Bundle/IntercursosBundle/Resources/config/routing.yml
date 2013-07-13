@@ -1,3 +1,11 @@
 homepage:
     pattern:  /
     defaults: { _controller: InfocorpIntercursosBundle:Default:index }
+
+news:
+    pattern:  /noticias
+    defaults: { _controller: InfocorpIntercursosBundle:Default:news }
+
+show_news:
+    pattern: /noticias/{id}
+    defaults: { _controller: InfocorpIntercursosBundle:Default:showNews }

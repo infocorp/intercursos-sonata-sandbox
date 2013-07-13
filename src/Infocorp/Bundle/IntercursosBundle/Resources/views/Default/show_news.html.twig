@@ -1,0 +1,9 @@
+{% extends 'InfocorpIntercursosBundle::layout.html.twig' %}
+{% block content %}
+<ul class="breadcrumb">
+  <li><a href="{{ path('homepage') }}">Home</a><span class="divider">/</span></li>
+  <li><a href="{{ path('news') }}">Noticias</a><span class="divider">/</span></li>
+  <li class="active">{{ news.title }}</li>
+</ul>
+{{ news.title }}
+{% endblock %}

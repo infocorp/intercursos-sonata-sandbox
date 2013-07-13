@@ -1,6 +1,22 @@
 {% extends 'InfocorpIntercursosBundle::layout.html.twig' %}
 {% block content %}
-  {% for new in news %}
-    {{ new.title }} <br>
+
+  <!-- ULTIMAS NOTICIAS -->
+  <section class="last-news">
+    <h2 class="news-heading">Ultimas Noticias</h2>
+    {% for new in news %}
+      {% if loop.first %}
+      <div class="special-news">
+        <img src="" alt="">
+        <h3>{{ new.title }}</h3>
+      </div>
+
+    <ul class="news-list">
+    {% else %}
+      <li>{{ new.title }}</li>
+    {% endif %}
   {% endfor %}
+    </ul>
+  </section>
+  <!-- ULTIMAS NOTICIAS -->
 {% endblock %}
