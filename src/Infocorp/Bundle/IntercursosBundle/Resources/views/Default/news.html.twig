@@ -1,0 +1,8 @@
+{% extends 'InfocorpIntercursosBundle::layout.html.twig' %}
+{% block content %}
+  <ul>
+    {% for item in news %}
+      <li><a href="{{ path('show_news', { 'id': item.id }) }}">{{ item.title }}</a></li>      
+    {% endfor %}
+  </ul>
+{% endblock %}
