@@ -11,7 +11,7 @@ class DefaultController extends Controller
         $news = $this
             ->getDoctrine()
             ->getRepository('ApplicationSonataNewsBundle:Post')
-            ->findLastPostQueryBuilder(10)
+            ->findLastPosts(10)
             ->getQuery()
             ->getResult()
         ;

@@ -24,5 +24,11 @@ use Sonata\NewsBundle\Entity\BasePostRepository;
  */
 class PostRepository extends BasePostRepository
 {
-
+    public function findLastPosts($limit)
+    {
+        return $this->createQueryBuilder('p')
+            ->where('p.enabled = true')
+            ->orderBy('p.createdAt', 'DESC')
+            ->setMaxResults($limit);
+    }   
 }
