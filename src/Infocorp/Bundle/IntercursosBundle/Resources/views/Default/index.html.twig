@@ -8,12 +8,14 @@
       {% if loop.first %}
       <div class="special-news">
         <img src="" alt="">
-        <h3>{{ new.title }}</h3>
+        <a href="{{ path('show_news', { slug: new.slug }) }}">
+          <h3>{{ new.title }}</h3>
+        </a>
       </div>
 
     <ul class="news-list">
     {% else %}
-      <li>{{ new.title }}</li>
+      <li><a href="{{ path('show_news', { slug: new.slug }) }}">{{ new.title }}</a></li>
     {% endif %}
   {% endfor %}
     </ul>
