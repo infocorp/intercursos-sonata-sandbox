@@ -54,7 +54,7 @@ class DefaultController extends Controller
     public function showCategoryAction($id)
     {
         $categoriesManager = $this->get('sonata.news.manager.category');
-
+        
         $categories = $categoriesManager->findBy(array('enabled' => true));
 
         $news = $this
